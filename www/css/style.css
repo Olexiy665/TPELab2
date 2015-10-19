@@ -1,0 +1,47 @@
+/* Empty. Add your own CSS if you like */
+table {
+  width: 100%;
+  text-align: center;
+}
+
+td {
+  border: 1px dotted #FFA726 !important;
+
+}
+
+td {
+  min-width: 30px;
+}
+
+ th {
+  border: 1px dotted #E65100;
+
+  background-color: #FFA726;
+
+}
+.bar.bar-stable  {
+	background-color:#FFECB3 !important;
+	border-color: #EF6C00
+}
+.item .item-complex {
+	border-color: #F57C00;
+}
+
+.button.button-positive {
+	border-color: #E65100;
+	background-color: #F57C00;
+
+}
+.button.button-positive.active, .button.button-positive.activated {
+	border-color: #E65100;
+	background-color: #FFB74D;
+
+}
+.determinant {
+  position: relative;
+  top: 10%;
+}
+.item .item-divider{
+  border-color: #E65100;
+  background-color: #FFB74D;
+}

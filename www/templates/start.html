@@ -1,0 +1,40 @@
+<ion-view view-title="Початкові значення">
+  <ion-content>
+    <h1>Початкові значення</h1>
+    <table>
+      <th>
+        {{horizontalHead.n}}
+      </th>
+      <th>
+        {{horizontalHead.min}}
+      </th>
+      <th>
+        {{horizontalHead.max}}
+      </th>
+      <tr>
+        <th ng-bind-html="verticalHead[0]"></th>
+        <td><input ng-model="Xs.x1.Xmin"></td>
+        <td><input ng-model="Xs.x1.Xmax"></td>
+
+      </tr>
+      <tr>
+        <th ng-bind-html="verticalHead[1]"></th>
+        <td><input ng-model="Xs.x2.Xmin"></td>
+        <td><input ng-model="Xs.x2.Xmax"></td>
+      </tr>
+    </table>
+
+    <button class="button button-block button-positive" ng-click="update(Xs)"> Зберегти!</button>
+
+   <div>
+   <table>
+   <th ng-repeat="head in headers">{{head}}</th>
+   <tr ng-repeat="row in planingMatrix track by $index ">
+      <td ng-repeat="cell in row track by $index">
+       {{cell}}
+      </td>
+   </tr>
+   </table>
+   </div>
+  </ion-content>
+</ion-view>

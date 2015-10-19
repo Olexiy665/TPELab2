@@ -1,0 +1,131 @@
+<ion-view view-title="Проміжні значення">
+  <ion-content>
+    <div class="list card">
+      <div class="card">
+      <div class="item item-divider">
+        Середні занчення функції відгуку
+      </div>
+      <div class="item item-text-wrap">
+        <table>
+          <th ng-repeat="head in averageYsHeaders">{{head}}</th>
+          <tr>
+            <td ng-repeat="ys in averageYs">{{ys}}</td>
+          </tr>
+        </table>
+      </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+          Диcперсії по рядкам
+        </div>
+        <div class="item item-text-wrap">
+          <table>
+            <th ng-repeat="head in despersionsHeaders">&sigma;{{head}}</th>
+            <tr>
+              <td ng-repeat="despersion  in despersions">{{despersion}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+         Fuv
+        </div>
+        <div class="item item-text-wrap">
+          <table>
+            <th ng-repeat="head in FuvsHeaders">{{head}}</th>
+            <tr>
+              <td ng-repeat="Fuv  in Fuvs">{{Fuv}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+          &theta;uv
+        </div>
+        <div class="item item-text-wrap">
+          <table>
+            <th ng-repeat="head in tetasHeaders">&theta;{{head}}</th>
+            <tr>
+              <td ng-repeat="teta  in tetas">{{teta}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+          Критерій R
+        </div>
+        <div class="item item-text-wrap">
+          <table>
+            <tr>
+            <th ng-repeat="head in RuvsHeaders ">&theta;{{head}}</th>
+            </tr>
+            <tr>
+              <td ng-repeat="Ruv  in Ruv track by $index">{{Ruv}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+       <div class="item item-divider">
+         Розрахунок нормованих коефіцієнтів
+       </div>
+        <div class="item item-text-wrap">
+          <p>mx1 =(X11+X12+X13)/3= = {{mx1}}</p>
+          <p>mx2 = (X21+X22+X23)/3= = {{mx2}}</p>
+          <p>my = ( y1 + y2 + y3 )/3= = {{my}}</p>
+
+          <table>
+            <tr>
+              <th ng-repeat="head in aNormHeaders">{{head}}</th>
+            </tr>
+            <tr>
+              <td ng-repeat="a  in aNorm track by $index">{{a}}</td>
+            </tr>
+          </table>
+          <p>a11 =(X11* &lt;Y&gt;1 +X12* &lt;Y&gt; 2 +X13* &lt;Y&gt;3 )/3 = {{aNorm11}}</p>
+         <p> a22 =(X21* &lt;Y&gt;1 +X22* &lt;Y&gt;2 +X23* &lt;Y&gt;3 )/3 = {{aNorm22}} </p>
+         <p> <img ng-src="img/b0.png"> <span class="determinant">= {{b0}}</span></p>
+          <p> <img ng-src="img/b1.png"> <span class="determinant">= {{b1}}</span></p>
+          <p> <img ng-src="img/b2.png"> <span class="determinant">= {{b2}}</span></p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">Нормоване рівняння</div>
+        <div class="item item-text-wrap">
+          Y = {{b0}} + {{b1}}*X<sub>1</sub> + {{b2}}*X<sub>2</sub>
+        </div>
+
+      </div>
+      <div class="card">
+        <div class="item item-divider">Натуралізація коефіцієнтів</div>
+        <div class="item item-text-wrap">
+          <table>
+            <tr>
+              <th ng-repeat="head in deltaHeaders track by $index">&#916;X{{head}}</th>
+            </tr>
+            <tr>
+              <td ng-repeat="delta  in deltaXs track by $index">{{delta}}</td>
+            </tr>
+          </table>
+          X<sub>10</sub> = {{x10}};
+          X<sub>20</sub> = {{x20}}
+        </div>
+        <div class="card">
+          <div class="item item-divider">Натуралізоване рівняння регресії</div>
+          <div class="item item-text-wrap">
+
+            Y = {{a0}} + {{a1}} * X<sub>1</sub> + {{a2}}*X<sub>2</sub>
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+
+
+
+  </ion-content>
+  </ion-view>
